@@ -1,16 +1,10 @@
-# Hexo Group Project
-
-[Project Requirements (Google Docs)](https://docs.google.com/document/d/1r5wWHmiqGrdrwhDOrO39RLZAFltqzKhnLjJGAQOHip8/edit#heading=h.b2ago5rmu5es)
-
 ## Authors
 
 ### Team Name : 404 Page Not Found
+-  Akshay Mulkalwar ( mulka002 )
 -  Gaurav Khandelwal ( khand052 )
 -  Aanjaneya Shukla ( shukl031 )
 -  Harshith Narasimhamurthy ( naras036 )
--  Akshay ( mulka002 )
-
-![](https://github.com/umn-5117-f16/module-1-group-project-404-page-not-found/blob/master/page_404.jpg) 
 
 ## Link
  https://tripdaily.herokuapp.com/ 
