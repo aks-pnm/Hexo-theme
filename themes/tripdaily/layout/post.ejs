@@ -1,0 +1,18 @@
+<title><%- page.title %></title>
+<div class="<%- page.location %>">
+   <div id="timeLocal"></div>
+   <div id="weather"></div>
+</div>
+
+<div class="container" id="main" style="position:relative;">
+
+  <div class="container-fluid">
+    <span >
+      <h1 class="placeName"><%- page.title %></h1>
+    </span>
+    <div id="map"></div>
+    <%- page.content %>
+  <!-- Comments -->
+    <%- partial('_partial/comments') %>
+  </div>
+</div>

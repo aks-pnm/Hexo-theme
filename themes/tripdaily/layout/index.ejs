@@ -1,0 +1,59 @@
+<title>TripDaily</title>
+<div class="tripDaily">
+   <div id="timeLocal"></div>
+   <div id="weather"></div>
+</div>
+
+<div class="container" id="main" style="position:relative;">
+<div id="map"></div>
+<div class="container" style="width:100%;">
+	<div class="row">
+	<%
+	var i=0;
+	var j=100;
+	page.posts.forEach(function(item, index){  %>
+
+	<div class="<%= i %> col-md-6 col-lg-6 col-xs-6" style="padding: 15px 10px 10px 0px;">
+		<div id="<%= j %>" class="SliderName_2">
+		<%- partial('_partial/article-index', {item: item, index: index}) %>
+		</div>
+		<div class="c"></div>
+         <%- partial('_partial/article-title', {item: item}) %>
+	  <div id="SliderNameNavigation_2"></div>
+	  <div class="c"></div>
+		<script type="text/javascript">
+			effectsDemo2 = 'rain,stairs,fade';
+			var demoSlider_2 = Sliderman.slider({container: '<%= j %>', width: 500, height: 500, effects: effectsDemo2,
+				display: {
+					autoplay: 3000,
+					loading: {background: '#000000', opacity: 0.5, image: 'images/loading.gif'},
+					buttons: {hide: true, opacity: 1, prev: {className: 'SliderNamePrev_2', label: ''}, next: {className: 'SliderNameNext_2', label: ''}},
+					description: {hide: true, background: '#000000', opacity: 0.4, height: 50, position: 'bottom'},
+					navigation: {container: 'SliderNameNavigation_2', label: '<img src="images/clear.gif" />'}
+				}
+			});
+		</script>
+		<div class="c"></div>
+	</div>
+	<% if( i%2==1 ){ %>
+	</div>
+	<div class="row">
+	<% } %>
+	<% i=i+1; j=j+1;}); %>
+	</div>
+<!--  for charts-->
+<h2>Sentiment analysis chart</h2>
+<div class="row545">
+	 <canvas id="graph" height="500" width="650" ></canvas>
+	 <script> plotChart(); </script>
+</div>
+
+<!-- for Twitter -->
+<div class="abc">
+<div style="text-align:center">
+<div class="twitter-timeline" data-widget-id="783447888911224832"></div>
+</div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
